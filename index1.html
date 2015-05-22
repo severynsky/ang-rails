@@ -1,0 +1,32 @@
+<html lang="en-us" ng-app="myApp">
+<head>
+	<title>My angular App</title>
+	<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/application.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body ng-controller="greetingController">
+	<div class="container">
+		<hr>
+		<div class="col-xs-6 col-xs-offset-3">
+			<input ng-model="inputt" ng-init="inputt=1">
+		<h1>Two times {{ inputt }} equals {{ greeting(inputt) }}</h1>
+		</div>
+	</div>
+
+	<section class="offscreen">
+		<h1>hello</h1>
+	</section>
+
+	<script type="text/javascript">
+		var myApp = angular.module("myApp", [])
+
+		myApp.controller('greetingController', ['$scope', function($scope){
+			$scope.greeting = function(value){ return value * 2};
+			
+		}]);
+	</script>
+</body>
+</html>

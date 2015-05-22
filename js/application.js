@@ -17,4 +17,17 @@ myApp.controller('mainController', [
         title: $scope.title, upvotes: 0});
         $scope.title = "";
     };
+
 }]);
+$('document').ready(
+  function(){
+    $('.offscreen').hide;
+    setTimeout(function(){
+    console.log('hello');
+      // $('.offscreen').css("margin-right", "0")
+      $('.offscreen').animate({
+                marginRight: '0',
+            }, 300 );
+    }, 2000);
+});
+    // $('.offscreen')

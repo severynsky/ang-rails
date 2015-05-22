@@ -4,24 +4,27 @@
 	<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/application.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body ng-controller="mainController">
 	<nav class="navbar navbar-default">
 		
 	</nav>
-	<div class="container">
+	<div class="container table">
 		<div class="row">
-			<div class="col-xs-8 col-xs-offset-2">
-				
-				<h3>{{test}}</h3>
+			<div class="centered">
+				<div class="col-xs-8 col-xs-offset-2">
+					
+					<h3>{{test}}</h3>
 
-				<div ng-repeat="post in posts | orderBy: '-upvotes'"><b>{{post.title}}</b> has - {{post.upvotes}} upvotes</div>
-<hr>
-				<form ng-submit="addPost()">
-					<input type="text" ng-model="title">
-					<button class="btn btn-info btn-md" type="submit">Post</button>
-				</form>
-	
+					<div ng-repeat="post in posts | orderBy: '-upvotes'"><b>{{post.title}}</b> has - {{post.upvotes}} upvotes</div>
+	<hr>
+					<form ng-submit="addPost()">
+						<input type="text" ng-model="title">
+						<button class="btn btn-info btn-md" type="submit">Post</button>
+					</form>
+		
+				</div>
 			</div>
 		</div>
 	</div>

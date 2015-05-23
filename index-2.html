@@ -1,0 +1,32 @@
+<html lang="en-us" ng-app="myApp">
+<head>
+	<title>My angular App</title>
+	<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/application.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body ng-controller="mainController">
+	<nav class="navbar navbar-default">
+		
+	</nav>
+	<div class="col-xs-4 col-xs-offset-4">
+		<div class="container" ng-app ng-init="qty=1;cost=2;dev=1">
+		<b>Invoice:</b>
+		<div>
+			quantity: <input type="text" min="0" ng-model="qty">
+		</div>
+		<hr>
+		<div>
+			cost: <input type="text" min="0" ng-model="cost">
+		</div>
+		<hr>
+		<div>
+			devider: <input type="text" min="0" ng-model="dev">
+		</div>
+		<hr>
+		<b>total: </b>{{ (qty * cost)/dev | currency}}
+	</div>
+
+	</div>
+</body>
+</html>

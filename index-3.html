@@ -1,0 +1,28 @@
+<html lang="en-us" ng-app="myApp">
+<head>
+	<title>My angular App</title>
+	<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/application.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div ng-controller="mainController">
+			<h1>{{ name }} !</h1>
+		</div>
+		<div ng-controller="secondController">
+			<h1>{{ name }} !</h1>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		myApp.controller('mainController',["$scope", function($scope){
+				$scope.name = "Main"
+		}]);
+
+		myApp.controller('secondController', ["$scope", function($scope){
+				$scope.name = "Second"
+		}])
+	</script>
+</body>
+</html>
